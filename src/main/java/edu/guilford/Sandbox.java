@@ -26,8 +26,36 @@ public class Sandbox {
             currentValue = currentValue * (1 + interestRate) + yearlyDeposit;
             System.out.println("At the end of year " + year + 
             ", value = $" + String.format("%.2f", currentValue));
-        //    year = year + 1; // make sure we move to the next year
+            year = year + 1; // make sure we move to the next year
         }
+
+        // Example of sentinel loop
+        int sentinel = 0;
+        int total = 0; // a variable for the running total
+        // need a Scanner object to read the numbers
+        Scanner scan = new Scanner(System.in);
+        // Get the first value from the user
+        System.out.println ("Enter an integer (0 to stop): ");
+        int value = scan.nextInt();
+        // Add them up while they're not 0
+        // Start the loop
+        // User enters integers and the program stops when the value entered is the sentinel
+        while (value != sentinel) {
+            // update the running total
+            total = total + value;
+            // get the next value
+            value = scan.nextInt();
+        }
+        // The program jumps here when the user enters 0
+        // Print out the result
+        System.out.println("The total is " + total);
+
+
+
+
+
+
+
        
     }
 }
